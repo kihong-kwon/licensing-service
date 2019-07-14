@@ -116,7 +116,7 @@
                             <outputDirectory>${project.basedir}/target/dockerfile</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/main/docker</directory>
+                                    <directory>src/main/Docker</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
