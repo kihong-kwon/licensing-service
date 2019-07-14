@@ -92,7 +92,8 @@
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>com.example.licenseservice.LicensingServiceApplication</start-class>
-        <docker.image.name>licensing-service</docker.image.name>
+        <docker.image.name>yano3000/licensing-service</docker.image.name>
+        <docker.image.tag>${env.BUILD_NAME}</docker.image.tag>
     </properties>
 
     <build>
@@ -129,7 +130,7 @@
                 <version>1.2.0</version>
 
                 <configuration>
-                    <imageName>${docker.image.name}</imageName>
+                    <imageName>${docker.image.name}:${docker.image.tag}</imageName>
                     <dockerDirectory>${project.basedir}/target/dockerfile</dockerDirectory>
                     <resources>
                         <resource>
